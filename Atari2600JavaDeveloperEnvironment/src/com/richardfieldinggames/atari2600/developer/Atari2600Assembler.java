@@ -550,6 +550,7 @@ public class Atari2600Assembler extends MOS6502Assembler {
 
     final Path romDir = FileSystems.getDefault().getPath(filename);
     romDir.toFile().getParentFile().mkdirs();
+    System.out.println("Cartridge file: "+romDir.toFile().getAbsolutePath());
     Files.write(romDir, byteArray);
   }
 
