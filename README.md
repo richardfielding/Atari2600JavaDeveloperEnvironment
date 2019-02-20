@@ -18,6 +18,6 @@ This will produce a frame full of coloured bars.
 I've not included any build scripts. I wrote this in Intellij. If anyone wishes to contribute to this project, feel free
 to expand the features.
 
-Thanks go our to https://github.com/ppeccin/javatari for their brilliant Atari 2600 emulator. I hope I'm not violating any 
+Thanks go out to https://github.com/ppeccin/javatari for their brilliant Atari 2600 emulator. I hope I'm not violating any 
 of their licence agreements by re-shipping their code with this project. If I am, please let me know and I'll see if
 I can do something about it. This is meant to be for fun!
