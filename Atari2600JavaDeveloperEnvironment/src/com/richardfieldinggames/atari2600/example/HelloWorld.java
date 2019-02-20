@@ -17,8 +17,20 @@ final public class HelloWorld extends Atari2600Assembler {
     final int colourIndex = 128;
     final int frameColourIndex = 129;
 
+    final String clearZeroPageLoop = "clearZeroPageLoop";
+    LDA_immediate(0);
+    LDX_immediate(0);
+    label(clearZeroPageLoop);
+    STA_zeroPageX(0);
+    DEX();
+    BNE(clearZeroPageLoop);
+
     LDA_immediate(0);
     STA_zeroPage(colourIndex);
+
+    LDA_immediate(1);
+    STA_zeroPage(audio0.volume);
+    STA_zeroPage(audio1.volume);
 
     final int scanLines = 192;
 
@@ -36,6 +48,12 @@ final public class HelloWorld extends Atari2600Assembler {
     LSR_accumulator();
     AND_immediate(binary("00000111"));
     STA_zeroPage(frameColourIndex);
+
+    STA_zeroPage(audio0.frequency);
+    STA_zeroPage(audio1.frequency);
+
+    STA_zeroPage(audio0.control);
+    STA_zeroPage(audio1.control);
 
     waitForEndOfVerticalBlankCode("HelloWorld");
 
