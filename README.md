@@ -13,7 +13,7 @@ then package that up as a 4k Atari 2600 cartridge, before starting up and loadin
 
 I've included a small HelloWorld example that you can run.
 
-This will produce a frame full of coloured bars.
+This will produce a frame full of scrolling bas-relief bars and some dreadful sounds!
 
 I've not included any build scripts. I wrote this in Intellij. If anyone wishes to contribute to this project, feel free
 to expand the features.
